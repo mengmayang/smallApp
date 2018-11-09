@@ -1,0 +1,80 @@
+*, *::after, *::before { 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+
+.container {
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+}
+/* Header */
+.codrops-header {
+	padding: 2em 1em 4em;
+	text-align: center;
+	z-index: 100;
+}
+
+.codrops-header h1 {
+	margin: 0.5em 0 0;
+	letter-spacing: -1px;
+	font-size: 4em;
+	line-height: 1;
+	font-family: 'Freckle Face', cursive;
+	font-weight: 400;
+	color: #fff;
+}
+.codrops-header h1 {
+  -webkit-animation: squigglevision 0.3s infinite;
+  animation: squigglevision 0.3s infinite;
+  -webkit-animation-timing-function: cubic-bezier(0, 0, 0.8, 0.9);
+  animation-timing-function: cubic-bezier(0, 0, 0.8, 0.9);
+}
+@-webkit-keyframes squigglevision {
+  0% {
+    -webkit-filter: url("#squiggly-0");
+    filter: url("#squiggly-0");
+  }
+  25% {
+    -webkit-filter: url("#squiggly-1");
+    filter: url("#squiggly-1");
+  }
+  50% {
+    -webkit-filter: url("#squiggly-2");
+    filter: url("#squiggly-2");
+  }
+  75% {
+    -webkit-filter: url("#squiggly-3");
+    filter: url("#squiggly-3");
+  }
+  100% {
+    -webkit-filter: url("#squiggly-4");
+    filter: url("#squiggly-4");
+  }
+}
+@keyframes squigglevision {
+  0% {
+    -webkit-filter: url("#squiggly-0");
+    filter: url("#squiggly-0");
+  }
+  25% {
+    -webkit-filter: url("#squiggly-1");
+    filter: url("#squiggly-1");
+  }
+  50% {
+    -webkit-filter: url("#squiggly-2");
+    filter: url("#squiggly-2");
+  }
+  75% {
+    -webkit-filter: url("#squiggly-3");
+    filter: url("#squiggly-3");
+  }
+  100% {
+    -webkit-filter: url("#squiggly-4");
+    filter: url("#squiggly-4");
+  }
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+  position: relative;
+}
