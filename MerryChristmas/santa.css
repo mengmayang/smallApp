@@ -788,6 +788,19 @@ body {
   border-bottom-right-radius: 20% 50%;
   z-index: 4;
 }
+.Santa-tool{
+  -webkit-animation: Santa-tool 12s none infinite;
+  animation: Santa-right-tool 12s none infinite;
+  position: absolute;
+  height: 185%;
+  width: 4%;
+  left: 35%;
+  top: 35%;
+  background-color: black;
+  border-radius: 20%;
+  z-index: 4;
+  transform:rotate(15deg);
+}
 .Santa-right-hand{
   -webkit-animation: Santa-right-hand 12s none infinite;
   animation: Santa-right-hand 12s none infinite;
