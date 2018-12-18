@@ -454,6 +454,28 @@
     transform: scaleY(1) translateY(0);
   }
 }
+@keyframes Santa{
+  0% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  /*10%{
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  20% {
+    -webkit-transform: translateX(-25%);
+    transform: translateX(-25%);
+  }
+  30% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }*/
+  40% {
+    -webkit-transform: translateX(25%);
+    transform: translateX(25%);
+  }
+}
 body {
   background-color: #4F8EDB;
 }
@@ -574,8 +596,10 @@ body {
 }
 
 .Santa {
-  -webkit-animation: husky-squiggly-anim 0.3s infinite;
-  animation: husky-squiggly-anim 0.3s infinite;
+  -webkit-animation: Santa 5s ease-in-out both infinite, squigglevision 5s infinite;
+  animation: Santa 5s ease-in-out both infinite, squigglevision 5s infinite;
+  /*-webkit-animation: Santa 5s ease-in-out both infinite;
+  animation: Santa 5s ease-in-out both infinite;*/
   height: 48vmin;
   width: 67.2vmin;
   top:-20%;
@@ -914,4 +938,71 @@ body {
   top: 120%;
   left: 85%;
   z-index: 2;
+}
+@-webkit-keyframes squigglevision {
+  0% {
+    -webkit-filter: url("#squiggly-0");
+    filter: url("#squiggly-0");
+  }
+  25% {
+    -webkit-filter: url("#squiggly-1");
+    filter: url("#squiggly-1");
+  }
+  50% {
+    -webkit-filter: url("#squiggly-2");
+    filter: url("#squiggly-2");
+  }
+  75% {
+    -webkit-filter: url("#squiggly-3");
+    filter: url("#squiggly-3");
+  }
+  100% {
+    -webkit-filter: url("#squiggly-4");
+    filter: url("#squiggly-4");
+  }
+}
+@keyframes squigglevision {
+  0% {
+    -webkit-filter: url("#squiggly-0");
+    filter: url("#squiggly-0");
+  }
+  25% {
+    -webkit-filter: url("#squiggly-1");
+    filter: url("#squiggly-1");
+  }
+  50% {
+    -webkit-filter: url("#squiggly-2");
+    filter: url("#squiggly-2");
+  }
+  75% {
+    -webkit-filter: url("#squiggly-3");
+    filter: url("#squiggly-3");
+  }
+  100% {
+    -webkit-filter: url("#squiggly-4");
+    filter: url("#squiggly-4");
+  }
+}
+
+.changeNameColor{
+  display: block;
+  width: 600px;
+  height: 100px;
+  /*渐变背景*/
+  background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%,
+  #ffd400 40%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);
+  color: transparent; /*文字填充色为透明*/
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;          /*背景剪裁为文字，只将文字显示为背景*/
+  background-size: 200% 100%;            /*背景图片向水平方向扩大一倍，这样background-position才有移动与变化的空间*/
+  /* 动画 */
+  animation: masked-animation 2s infinite linear;
+}
+@keyframes masked-animation {
+  0% {
+      background-position: 0 0;   /*background-position 属性设置背景图像的起始位置。*/
+  }
+  100% {
+      background-position: -100% 0;
+  }
 }
